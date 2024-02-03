@@ -25,13 +25,16 @@ li {
 
 :root {
   --color-red-1: #cc3333;
+  --color-red-2: #cc3333;
   --color-gray-1: #ccc;
 }
 
 :root {
-  --color-primary: var(--color-red-1)
+  --color-primary: var(--color-red-1);
+  --color-info: var(--color-red-2)
 }
 
+/* 
 ::-webkit-scrollbar {
   display: none;
-}
+} */

@@ -104,9 +104,8 @@ const options = {
         {
           label: '我用十天的时间，拿到了到了n＋1！',
           desc: '杭州，工龄11个月。想裁员不赔偿，我用十天的时间，拿到了到了n+1！你真的甘心只做有经验的事情吗？那你人生的各种个第一次岂不是永远都不会发生？',
-          // url: './blog/f5134afa74e54c7a9d68b116f6d286a7.html',
-          url: 'https://excessive-mirror-91e.notion.site/n-1-f5134afa74e54c7a9d68b116f6d286a7',
-          thumbnail: 'blog/f5134afa74e54c7a9d68b116f6d286a7/Untitled 6.png'
+          url: './blog/blog_1.html',
+          thumbnail: 'blog/blog_1/6.png'
         }
       ]
     }
