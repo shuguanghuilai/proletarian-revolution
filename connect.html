@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>proletarian revolution</title>
   <link rel="stylesheet" href="./base.css">
-  <link rel="stylesheet" href="./blog.css">
+  <link rel="stylesheet" href="./connect.css">
   <script src="./libs/vue@3.4.15.min.js"></script>
   <script src="./utils.js"></script>
 </head>
@@ -19,19 +19,17 @@
       <a href="./connect.html" target="_blank">加入群组</a>
     </div>
     <div class="content-box">
-      <h1>{{title}}</h1>
-      <template v-for="(line, index) of contents" :key="index">
-        <img v-if="line[2] === 'image'" :src="line[0]" />
-        <p v-else :style="line[1]" v-html="line[0]"></p>
-      </template>
+      <img src="./static/QRCode.jpg" />
     </div>
   </div>
 </body>
 <script>
-  const id = getUrlParm('id')
-  const s = document.createElement('script')
-  s.src = `./blog/blog_${id}.js`
-  document.body.append(s)
+  const { createApp, ref } = Vue
+
+  const options = {
+  }
+
+  createApp(options).mount('#app')
 </script>
 
 </html>

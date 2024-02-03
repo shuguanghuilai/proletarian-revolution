@@ -16,13 +16,15 @@
     <div class="app-box">
       <header>
         <div class="header-box">
-          <h1>无 产 阶 级 必 胜</h1>
+          <!-- <h1>无 产 阶 级 必 胜</h1> -->
+          <h1>曙 光 会 来</h1>
           <p>守护本该属于我们的工人权益</p>
       </header>
       <nav>
         <a :class="getNavTabClass('story')" @click="onTabClick('story')">革命的前行者</a>
         <a :class="getNavTabClass('tutorial')" @click="onTabClick('tutorial')">敌人的诡计</a>
         <a :class="getNavTabClass('regulation')" @click="onTabClick('regulation')">法律条文</a>
+        <a :class="getNavTabClass('organize')" @click="onTabClick('organize')">加入群组</a>
       </nav>
       <div class="content-box">
         <div v-if="activeTab === 'story'" class="story-box">
@@ -51,6 +53,9 @@
         </div>
         <div v-else-if="activeTab === 'tutorial'" class="tutorial-box">
           此页列举敌人用到的各种手段
+        </div>
+        <div v-else-if="activeTab === 'organize'" class="organize-box">
+          <img src="./static/QRCode.jpg" />
         </div>
       </div>
     </div>
