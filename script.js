@@ -4,7 +4,6 @@ const options = {
   data() {
     return {
       activeTab: 'story',
-      search: '',
       countryRegulations: [
         {
           label: '中华人民共和国劳动法',
@@ -103,17 +102,10 @@ const options = {
 
       storys: [
         {
-          label: '喝茶这件事',
-          desc: '坐标深圳，工龄2.5年+。1月18日，SiE 负责人过来搞事。切项目，1月底要完成，不去的就2月回原公司喝茶。我就不写外包是谁了，用电脑键盘显示”四儿”的前三个字母。',
-          url: './blog/喝茶这件事.html',
-          thumbnail: './blog/hechazhejianshi/Untitled.jpeg'
-        }
-      ],
-
-      hots: [
-        {
-          label: '第一次被裁，用 10 天时间争取到了 n + 1 赔偿！',
-          url: 'https://learnku.com/laravel/t/73069'
+          label: '我用十天的时间，拿到了到了n＋1！',
+          desc: '杭州，工龄11个月。想裁员不赔偿，我用十天的时间，拿到了到了n+1！你真的甘心只做有经验的事情吗？那你人生的各种个第一次岂不是永远都不会发生？',
+          url: './blog/f5134afa74e54c7a9d68b116f6d286a7.html',
+          thumbnail: 'blog/f5134afa74e54c7a9d68b116f6d286a7/Untitled 6.png'
         }
       ]
     }

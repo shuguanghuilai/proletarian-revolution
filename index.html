@@ -11,57 +11,44 @@
 
 <body>
   <div id="app">
-    <header>
-      <div class="header-box">
-        <h1>无 产 阶 级 万 岁</h1>
-        <!-- <p>没有什么使我停留--除了目的。总是岸旁有玫瑰，有绿茵，有宁静的港湾。我不是不系之舟</p> -->
-        <div class="search-box">
-          <input type="text" placeholder="输入搜索内容" v-model="search" />
-          <button @click="onSearch">搜索</button>
-        </div>
-        <div class="hot-box">
-          热搜：
-          <ul>
-            <li v-for="(item, index) of hots" :key="index">
-              <a :href="item.url" target="_blank">{{item.label}}</a>
-              </a>
-            </li>
-          </ul>
-        </div>
-    </header>
-    <nav>
-      <div class="nav-box">
+    <div class="app-box-bg"></div>
+    <div class="app-box">
+      <header>
+        <div class="header-box">
+          <h1>无 产 阶 级 万 岁</h1>
+      </header>
+      <nav>
         <a :class="getNavTabClass('story')" @click="onTabClick('story')">革命的前行者</a>
         <a :class="getNavTabClass('tutorial')" @click="onTabClick('tutorial')">避坑</a>
         <a :class="getNavTabClass('regulation')" @click="onTabClick('regulation')">法律条文</a>
-      </div>
-    </nav>
-    <div class="content-box">
-      <div v-if="activeTab === 'story'" class="story-box">
-        <a v-for="(item, index) of storys" :key="index" class="story-item" :href="item.url">
-          <div class="story-item-l">
-            <img :src="item.thumbnail" />
-          </div>
-          <div class="story-item-r">
+      </nav>
+      <div class="content-box">
+        <div v-if="activeTab === 'story'" class="story-box">
+          <a v-for="(item, index) of storys" :key="index" class="story-item" :href="item.url">
+            <div class="story-item-l">
+              <img :src="item.thumbnail" />
+            </div>
+            <div class="story-item-r">
+              <h3>{{item.label}}</h3>
+              <p>{{item.desc}}</p>
+            </div>
+          </a>
+        </div>
+        <div v-else-if="activeTab === 'regulation'" class="regulations-box">
+          <h2>国家法律</h2>
+          <a v-for="(item, index) of countryRegulations" :key="index" class="link-box" :href="item.url" target="_blank">
             <h3>{{item.label}}</h3>
             <p>{{item.desc}}</p>
-          </div>
-        </a>
-      </div>
-      <div v-else-if="activeTab === 'regulation'" class="regulations-box">
-        <h2>国家法律</h2>
-        <a v-for="(item, index) of countryRegulations" :key="index" class="link-box" :href="item.url" target="_blank">
-          <h3>{{item.label}}</h3>
-          <p>{{item.desc}}</p>
-        </a>
+          </a>
 
-        <h2>地方法律</h2>
-        <a v-for="(item, index) of localRegulations" :key="index" class="link-box" :href="item.url" target="_blank">
-          <h3>{{item.label}}</h3>
-          <p>{{item.desc}}</p>
-        </a>
+          <h2>地方法律</h2>
+          <a v-for="(item, index) of localRegulations" :key="index" class="link-box" :href="item.url" target="_blank">
+            <h3>{{item.label}}</h3>
+            <p>{{item.desc}}</p>
+          </a>
+        </div>
+        <div v-else-if="activeTab === 'tutorial'" class="tutorial-box">123</div>
       </div>
-      <div v-else-if="activeTab === 'tutorial'" class="tutorial-box">123</div>
     </div>
   </div>
 </body>

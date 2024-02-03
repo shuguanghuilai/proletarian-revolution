@@ -1,67 +1,5 @@
 @import url(./base.css);
 
-header {
-  background-color: var(--color-primary);
-  height: 36rem;
-  width: 100vw;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-box h1 {
-  font-size: 3.6rem;
-  text-align: center;
-}
-
-.header-box .search-box {
-  height: 48px;
-  display: flex;
-  width: 70rem;
-  border-radius: 0.8rem;
-  overflow: hidden;
-  margin: 2.8rem 0 1.2rem 0;
-}
-
-.header-box .search-box input {
-  outline: none;
-  border: none;
-  padding: 8px;
-  flex: 1;
-}
-
-.header-box .search-box button {
-  width: 100px;
-  border: none;
-  cursor: pointer;
-  background-color: #eee;
-}
-
-.header-box .search-box button:hover {
-  background-color: #ccc;
-}
-
-.hot-box {
-  display: flex;
-  max-width: 70rem;
-}
-
-.hot-box a {
-  color: #fff;
-}
-
-.hot-box a:hover {
-  color: #ccc;
-}
-
-.hot-box ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  flex: 1;
-}
-
 .regulations-box {
   display: flex;
   flex-direction: column;
@@ -90,29 +28,65 @@ header {
   color: #666;
 }
 
+/* //////////////////////////////////////////////////////////////// */
+.app-box {
+  max-width: 90rem;
+  min-width: 50rem;
+  /* background-color: yellowgreen; */
+  margin: 0 auto;
+  z-index: 99;
+  position: relative;
+}
+
+.app-box-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 36rem;
+  background-color: var(--color-primary);
+  z-index: 1;
+}
+
+header {
+  height: 36rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.header-box h1 {
+  font-size: 3.6rem;
+  text-align: center;
+}
+
 nav {
   position: sticky;
   top: 0;
   height: 6rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: white
+  background-color: white;
+  /* background-color: yellowgreen; */
+  gap: 2rem;
+  font-size: 1.8rem;
+  padding: 0 1.6rem;
 }
 
-.nav-box {
-  min-width: 90rem;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 2rem;
-}
-
-.nav-box a {
+nav a {
   cursor: pointer;
 }
 
-.nav-box a:hover {
+nav a:hover {
   color: var(--color-primary);
 }
 
@@ -122,12 +96,16 @@ nav {
 }
 
 .content-box {
-  width: 90rem;
-  margin: 0 auto 2rem auto;
+  padding: 0 1.6rem 4rem 0;
+}
+
+.story-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .story-item {
-  /* background-color: yellowgreen; */
   display: flex;
   padding: 0.8rem;
   gap: 20px;
@@ -147,7 +125,7 @@ nav {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border: 0.1rem solid #eee;
+  border: 0.1rem solid #f3f3f3;
 }
 
 .story-item-l img {
