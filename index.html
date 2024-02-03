@@ -40,13 +40,13 @@
           <h2>国家法律</h2>
           <a v-for="(item, index) of countryRegulations" :key="index" class="link-box" :href="item.url" target="_blank">
             <h3>{{item.label}}</h3>
-            <p>{{item.desc}}</p>
+            <p v-html="item.desc"></p>
           </a>
 
           <h2>地方法律</h2>
           <a v-for="(item, index) of localRegulations" :key="index" class="link-box" :href="item.url" target="_blank">
             <h3>{{item.label}}</h3>
-            <p>{{item.desc}}</p>
+            <p v-html="item.desc"></p>
           </a>
         </div>
         <div v-else-if="activeTab === 'tutorial'" class="tutorial-box">
