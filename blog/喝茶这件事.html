@@ -1,0 +1,720 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>喝茶这件事</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b90c37be-2644-4629-bca0-41cb64afbc5b" class="page sans"><header style="background-color: #fff; padding: 40px 0 20px 0; position: sticky; top: 0;"><h1 class="page-title"><a href="../index.html">主页 / 喝茶这件事</a></h1><p class="page-description"></p></header><div class="page-body"><p id="5017324b-6b21-4408-8f5d-7fa65edd584e" class="">
+</p><p id="ddf8850e-bef4-4d6a-a3da-78cd162b31fd" class="">坐标深圳，工龄2.5年+。</p><p id="b79e5452-300d-47d1-81ab-e742b23fe0b3" class="">1月18日，SiE 负责人过来搞事。切项目，1月底要完成，不去的就2月回原公司喝茶。</p><p id="9e643c85-0f5a-40c1-ab43-1a02b9a90c0c" class="">我就不写外包是谁了，用电脑键盘显示”四儿”的前三个字母。</p><p id="df235b67-e8e9-46f7-af6f-34f47324028b" class="">
+</p><p id="c4ec4844-512a-4ec4-a2d0-767af2df134c" class="">初次试探</p><p id="f06de46d-08c8-4915-9948-0ede782309e0" class="">1月20日。一大早我还在睡梦中，四儿的负责人打电话给我，我没接到，他过了半小时终于把我吵醒了，我接了电话。一般我都不接陌生电话的，这次真的凭第六感。</p><p id="e39e90c7-497d-4fb0-b8cb-434e5ec27409" class="">他问我为什么不切，我并没有直接回答，我说晚点再回他。我确实没有整理好答案，我只知道我要拿到这笔补偿金。</p><p id="cf69c8b6-a2fd-487f-a3fa-6c951cb9cb9d" class="">到了下午，我在微信上认真地回他了，大致方案有三个：</p><ol type="1" id="700aee36-2c36-465d-bdc0-5019c2a6d576" class="numbered-list" start="1"><li>切到四儿，但是要给我涨工资，要在三年的合同期内，涨的这部分工资累计等于我的补偿金。</li></ol><ol type="1" id="67c26220-2fc9-4d4b-ae50-125c59f631c0" class="numbered-list" start="2"><li>若不涨工资，切到四儿，麻烦告知佰钧成把N赔给我。</li></ol><ol type="1" id="995c6bc3-1a59-426c-84bb-5dcfbd0252a5" class="numbered-list" start="3"><li>OK最后不切，那你们自己招人吧，我自己去找佰钧成。</li></ol><p id="a8c6791c-67c5-458a-a72a-c025ee5c81b5" class="">这货一直到了晚上才电话给我说他今天在外面，没看手机，他真是会放狗屁。现在还有人一天到晚不看手机的呢？他选了2方案，但是让我自己找佰钧成要补偿，我说第二天下午回他。</p><p id="2a10ebc0-2b45-4e4d-b810-b36dd7be0b06" class="">第二天我压根就没找佰钧成，这还找啥？佰钧成把我们卖给四儿，佰钧成除了不用赔偿，还能从四儿那里赚一笔转让费，这赚飞的事情能给我搞砸？</p><p id="9ec0b53e-ef95-4333-94e1-c42780f1c78a" class="">我快下午的时候才想起这个事情，我随手回了他我的决定，他也仅仅回了个“嗯”。</p><p id="41fda12f-25cc-4bb6-839c-0ad59a5fb709" class="">
+</p><p id="019bcdd2-a325-421c-abbc-8325993cfc82" class="">首次交锋</p><p id="c7f5e1eb-fa1d-4796-ba73-48aeb4cd197d" class="">1月22日。这天还在上班，晚上7点我还有个迭代会议要开，大概六点半晚饭时间我接到了个陌生电话。我意思是一位是 SiE 负责人打来的，没想到是 BJC 的不知名人士，反正我到现在也忘记他的名字和职责。他说他在公司里头，我去我在想如果我回家了，这货不是白跑一趟？</p><p id="ab96a499-990b-4943-9cab-235b50a22c74" class="">总之进了会议室，是两个 80 后，他们就开始巴拉巴拉跟我说，主要有这几件事情：</p><ol type="1" id="8efcd297-e88e-4bad-9899-0a13d9874444" class="numbered-list" start="1"><li>大环境不好，你现在有个稳定的工作就很好了。</li></ol><p id="62abb555-fef0-43b2-981e-6c2e9d106b45" class="">
+</p><p id="7f7cdcd9-b7a0-4c02-aecb-ff307ccb0083" class="">1月31日 回绝待岗协议</p><p id="affd8591-ddf1-4613-9291-5a712e8ff047" class="">前两天把企业微信下载回来了，就是担心公司发的邮件收不到，没回复就当默认的情况。没想到昨晚7点，公司还真发邮件来了，但没有推送，早上起来才看到</p><p id="02165f78-9abd-4bcb-8c98-d2b8b6b1d775" class="">邮件标题并不是正儿八经的协议，而直接是一份通知书，大意就是让我先把年假休完，然后领着基本工资待岗。</p><p id="d221c202-7de1-4de2-9ecd-07423f1874ef" class="">我赶紧撰写了一篇初稿，左改右改的到了中午才发出去。</p><figure id="f343ba80-fe6c-411c-803d-25c813ce36c2" class="image"><a href="hechazhejianshi/Untitled.jpeg"><img style="width:336px" src="hechazhejianshi/Untitled.jpeg"/></a></figure><p id="c1571c70-e6c9-47cd-8caf-87756c7c47d7" class="">
+</p><p id="5a642321-143d-4f93-b261-17c511537511" class="">这封邮件都没有得到回复，直到晚上公司的小姐姐用微信告诉我明天找林报道。从目前来看，至少我的第一点诉求是实现了——年假不被滥用。待岗的情况等明儿到公司再说吧。</p><p id="8131f86d-b00b-4e8e-b80c-fbfa26fd38ec" class="">
+</p><p id="d91afbec-ef61-403b-9e30-95c98e5d2599" class="">第一关：打发</p><p id="d765c853-98f0-4590-84fe-edc3f7910b3c" class="">早上十一点半，公司派了一个人和我聊，本文就叫他大林吧。</p><p id="f5fb4f04-03ea-4e41-9fd1-f2113a6642fd" class="">唠了一小会有的没的就进入正题了，他给了我两个选择：</p><ol type="1" id="5495f41f-890d-4630-8401-ddf1154f0868" class="numbered-list" start="1"><li>找工作：公司推 &amp; 自己找</li></ol><ol type="1" id="7e59119d-b8f4-40aa-97e6-f7dd88adac8d" class="numbered-list" start="2"><li>离职</li></ol><p id="3e86adcb-5917-47f4-a128-b7244a25f422" class="">大林说，公司帮忙推简历是没有可能了，业务线都在萎缩。</p><p id="55917449-8d1b-40e9-a3d3-19c616221125" class="">那我只能把我的计划说出来，我会把公司安排的事情都做好，我也会自己投简历，但多久能找到工作我不确定，如果公司觉得耗太久了，可以走正常辞退流程。</p><p id="89b63b06-c319-4ac8-a609-69d092b64d01" class="">大林问正常辞退流程是什么，我一听这话他们就是装傻。我说N+1，他说N+1是太理想化的事情，整个行业都是这样的规矩，包括现在大环境也不好，不会赔这么多的。</p><p id="3b820df4-633c-4268-8f5a-3ee444f3be3a" class="">
+</p><p id="7993d817-5529-4a02-bb00-9f3d6d4e5bfa" class="">我佛了，也就在中国，这类企业才能活得下来，甚至有些企业都干上市了，简直是对劳动法的无视。当然这些话我没有说出来，仅代表个人感叹。</p><p id="0c593b3e-88b2-4348-8dd1-604debc4af01" class="">
+</p><p id="9154b643-45a9-42f5-a93a-a623576d0a8c" class="">他还笑着说过一句，我看到你在待岗邮件里回复的小作文了。哈哈小作文？看样子公司还没遇到过像我这样较真的人，我大概知道什么情况了。</p><p id="1fd8807e-64f2-4c2e-8d76-151c8c6f55c0" class="">
+</p><p id="ff5779e8-5414-4423-b7bd-a1f8def9bc70" class="">我们中间又瞎聊了一段，于是我把节奏拉了回来，我说，待岗期间我会投简历，直到我找到满意的工作为止，如果公司觉得我多余，就正常赔N+1让我走人，不浪费大家时间。</p><p id="e710bef9-1085-496c-a059-0ac5b50dc9b3" class="">
+</p><p id="cf1e432b-9a00-40b2-9b1d-338fba177598" class="">很显然他还是推三推四，理由无非就那几点，大环境不好，行业如此，N+1理想化，甚至还提到了我家庭，以我的家庭条件不用为了那点赔偿。我真是哭笑不得。</p><p id="5b1c43de-2f52-4c02-85d4-845824c5c3b7" class="">
+</p><p id="b80d672c-9ba6-402f-a1a4-a777c3843133" class="">事后我想了一下，应该这么义正言辞地和大林说：</p><p id="91f7a62d-11d0-4348-b95f-112f7eac75db" class="">公司没有项目了，那就N+1辞退我，只赔一个月不合理也不合法，业务萎缩不代表在亏钱，公司其他部门人员都还在正常工作，包括前台都是两个人，说明你们还有在赚钱，别人我不管，难道就赔我N+1，公司就会破产吗?</p><p id="ee0cfa1a-2f9e-4983-8b00-882a611029d2" class="">
+</p><p id="93b47b80-9fec-496a-9c93-1daa4fbefd2e" class="">快到饭点时间，我看这场谈判也差不多了，继续聊也就那样。没想到大林还主动缠着我吃饭，生怕我和战友聊这些。这种感觉很奇怪哈哈，我也是人生第一次体验：工作时间我们是敌人，休息时间我们得唠点家常。大家都不能明说，大家都不能捅破。</p><p id="3a6e99e6-43c3-4a91-be0d-9488aa78a62d" class="">
+</p><p id="13167b60-1230-4c40-8d83-a1bc8d42ca87" class="">总的来说，我没发挥好，也需要一场小战争让我鼓起士气，我也经过这次的谈判，逐渐明白我的思路，为后续做好准备。</p><p id="9db7e0bd-9bf6-4560-a02a-a42f1c25e680" class="">
+</p><p id="6b75150b-e8e7-43d7-8551-fe3caa9a6b1b" class="">第一点五关：让他们惧怕的东西</p><p id="2d93b96f-eabb-443e-8a40-9f5f06252e1e" class="">到了下午，大林又找到了我，换了另外一个房间，也还是只有他。这一次他知道我还在录音，直接提出录音这个事情让他很反感，哈哈哈。他让我关掉，理由是像被监视一样。</p><p id="397384b2-64c0-4fef-8e41-4a120dc83611" class="">我丢，我真是我丢，你也知道这种感受？我一个受害者都没说什么。我回拒了，这是为了保护我自己，你这么惧怕这个，势必会套路我。而且你代表公司来和我谈话，你只是个传话筒，你担心什么？</p><p id="1f3d115d-60fd-4075-aac8-6e32bf18a0b0" class="">他的回复是，如果你不关掉的话，那我们之间就没什么好聊的了。他说出这一句话时果然印证了我上面的猜想，反感只是幌子，套路我才是真的。</p><p id="83d59c67-11aa-45c6-a23f-679f8e48552a" class="">临别前我顺势把我的态度告诉他：我会准备好我的简历，直到我找到满意的工作为止，公司如果觉得我多余，请支付我N+1赔偿让我走人。</p><p id="997e4073-8d67-4aab-9d2c-c3b70445c14a" class="">OK，这一关草草结束。</p><p id="4d983abf-1d46-4642-a8eb-774a44b409eb" class="">看得出来，他们知道我会录音，也很怕录音。那我就不必藏着掖着了，下次谈话就做两点，否则就不用谈了。第一、录音；第二、表明态度。</p><p id="abcb22de-d673-4e3b-b2b5-94df34b2ff3d" class="">
+</p><p id="505ac853-05a6-4373-bafb-d8b110104a0e" class="">2月2日</p><p id="05e2ee84-5fa1-4195-8d97-25ca225251dd" class="">翌日，我再次收到了停工停岗的推送，意味着他们无视我之前回拒公司停工停岗的邮件，我也预料到这一点。</p><figure id="b9d51a75-7f38-46e2-8f0b-2bb101b219a7" class="image"><a href="hechazhejianshi/Untitled.png"><img style="width:937px" src="hechazhejianshi/Untitled.png"/></a></figure><p id="b9828cd1-80d3-4a76-8ba5-2201166b734e" class="">我先是找到了我的直接上级，表明需要回复我的邮件，否则我拒绝这项决定。</p><figure id="c03a5efd-4f3b-4467-98c9-e226abc171e0" class="image"><a href="hechazhejianshi/Untitled%201.png"><img style="width:819px" src="hechazhejianshi/Untitled%201.png"/></a></figure><p id="3e87a4f0-a619-49e4-9fbf-4633aa4a9402" class="">
+</p><p id="f81a75a9-584f-4b5f-bb7c-461cf3bf1f65" class="">
+</p><p id="169406a2-0941-4545-b7d1-c7be6588cf8b" class="">
+</p><p id="fb7fc6d4-c898-4d61-a7a5-e5aee2210e06" class="">
+</p><p id="449a116f-055d-4169-b02e-6c90f065d141" class="">
+</p><p id="495ad4b0-029a-4bcb-9a00-298f2f694f3d" class="">
+</p><p id="a527c2a6-8f6f-4ac9-900f-20dc8cf4bdc6" class="">
+</p><p id="db99298b-71e5-4c35-970a-ceeea4253cf2" class="">
+</p><p id="246ed1fb-6b3f-4847-943b-b4f8bdd3c560" class="">
+</p><p id="f7031f9d-045b-4aad-8027-839a6b4106af" class="">
+</p><p id="aea0b275-e17e-44a0-aabd-61a580cc1dbb" class="">
+</p><p id="b2ef2500-c893-45be-b199-048725dfbe58" class="">
+</p><p id="ce48825d-57e3-47ae-88ed-1105b0c514c3" class="">正义总结，都是我整个过程用到的方法。</p><ol type="1" id="83542b43-dd33-4838-9b01-9087b25a294e" class="numbered-list" start="1"><li>你要知道你的目标：N+1。0.5N都直接回拒，请直接！</li></ol><ol type="1" id="f7b7b065-2266-43c9-a952-214591602e32" class="numbered-list" start="2"><li>你争持了很久仍然不是你想要的，你直接起身说回去考虑考虑，后面再给他答复！现场的环境必定会让你的决策变得不理性。</li></ol><ol type="1" id="dae220a6-240a-4434-b4c0-4845c3f30b5b" class="numbered-list" start="3"><li>保持主动，自己掌握谈判节奏，谈的时间太长了，主动切断！谈的次数太多了，就提升赔偿金额！</li></ol><ol type="1" id="e3f3e88e-0dd4-422b-a9d1-e16b7ee540d2" class="numbered-list" start="4"><li>谈判不是为了争取什么，态度已经很明确了，没必要聊。谈判的目的是获取更多信息，知道对方底细，比如第一次的小作文，我知道他们很少遇到这种事，比如录音，他们也很怕这个。</li></ol><ol type="1" id="fbbafbee-d1dd-4610-9649-ecc603f5face" class="numbered-list" start="5"><li>不要惧怕同事异样的眼光，你要这么想：如果他们把你当猴看，OK，我现在确实就是一只需要正面硬刚的猴子，但不好意思，同时你也是一只任人宰割的猪，我猴你猪，咱俩互不拖欠。很有意思的是，一旦我接受了这个观点，我的眼里这些同事都变成了一只只可爱的猪仔。</li></ol><p id="c085abd4-3910-4b12-967a-cefc386858a7" class="">
+</p><p id="2eda22a2-2714-40f6-8114-58a6babd1f6a" class="">心得</p><ol type="1" id="673e721a-396f-453b-95c5-c53c99281ed7" class="numbered-list" start="1"><li>我在做一件正确的事情，我代表着无产阶级向资本主义发起宣告。</li></ol><ol type="1" id="6d56c010-310f-491b-a2f3-a954ae627501" class="numbered-list" start="2"><li>没有什么使我停留—-除了目的。纵使岸旁有玫瑰，有绿茵，有宁静的港湾，我不是不系之舟。</li></ol><ol type="1" id="2e1e0e3e-06dd-46e4-a326-2576ead635e6" class="numbered-list" start="3"><li>你跟他们讲法，他们就跟你讲理，讲德，搞笑。</li></ol><ol type="1" id="208570ee-8869-40ab-9335-372ced2d09a0" class="numbered-list" start="4"><li>停工期间我也会感到烦躁，漫长的拉扯也会陷入内耗当中，企业的违法成本太低了！但我也是一个内心很强大的人，我总会找到办法排解掉这些焦虑毒素，我看相关文章找到认同，我自言自语激励自己，我时常和老婆说我真的很想你。</li></ol><ol type="1" id="48cdd9c3-f867-4ddd-873c-a5b595184201" class="numbered-list" start="5"><li>公司居然有这么多人为了一个不赔偿，我很怀疑你们是不是在吃空饷，拿钱的不干正事。</li></ol><p id="8f3a1409-5247-4b8d-b7e0-2ead082a2915" class="">
+</p><p id="a5047edc-bfdf-400b-9ce8-e5e4e53da2a0" class="">
+</p><p id="c5afd8b6-393b-455c-aa57-e73d6e88d736" class="">
+</p><p id="1cd66140-d613-4374-af6e-9b3e82681cb4" class="">
+</p><p id="2640d78a-124b-4fcd-88a1-132e8995247f" class="">
+</p><p id="6c7bd055-c2a2-4570-adda-cd4e7e2f261b" class="">
+</p><p id="f300f836-6868-47e3-90f7-78821da40aac" class="">
+</p><p id="c7640415-dcc2-4792-987f-e3397c32b64b" class="">
+</p><p id="50c76af1-70d5-4d50-9a42-0b991032700d" class="">
+</p><p id="67e93023-6ed5-4f15-9187-91ff468d1246" class="">
+</p><p id="25149369-f130-4bbe-a494-f580b6a6bfbe" class="">
+</p><p id="427aefe9-f759-4796-8f9c-e5cdb7f626e2" class="">
+</p><p id="306eef9c-2375-426c-8ae3-23710fab61b6" class="">
+</p><p id="f34c88cb-2fbb-467c-b415-e05f7791d25a" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+<div><a href="../index.html">返回主页</a></div>
+</body></html>
