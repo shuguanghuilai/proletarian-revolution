@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>proletarian revolution</title>
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./blog.css">
+  <script src="./libs/vue@3.4.15.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="header-box">
+      <h1>无产阶级万岁</h1>
+      <a href="./index.html">首页</a>
+    </div>
+    <div class="content-box">
+      <h1>{{title}}</h1>
+      <template v-for="(line, index) of contents" :key="index">
+        <img v-if="line[2] === 'image'" :src="line[0]" />
+        <p v-else :style="line[1]" v-html="line[0]"></p>
+      </template>
+    </div>
+  </div>
+</body>
+<script>
+  const id = location.search.split('?')[1].split('&').find(item => item.split('=')[0] === 'id').split('=')[1]
+  const s = document.createElement('script')
+  s.src = `./blog/blog_${id}.js`
+  document.body.append(s)
+</script>
+
+</html>

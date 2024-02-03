@@ -16,15 +16,16 @@
       <header>
         <div class="header-box">
           <h1>无 产 阶 级 万 岁</h1>
+          <p>守护本该属于我们的权益</p>
       </header>
       <nav>
         <a :class="getNavTabClass('story')" @click="onTabClick('story')">革命的前行者</a>
-        <a :class="getNavTabClass('tutorial')" @click="onTabClick('tutorial')">避坑</a>
+        <a :class="getNavTabClass('tutorial')" @click="onTabClick('tutorial')">诡计多端</a>
         <a :class="getNavTabClass('regulation')" @click="onTabClick('regulation')">法律条文</a>
       </nav>
       <div class="content-box">
         <div v-if="activeTab === 'story'" class="story-box">
-          <a v-for="(item, index) of storys" :key="index" class="story-item" :href="item.url">
+          <a v-for="(item, index) of storys" :key="index" class="story-item" :href="item.url" target="_blank">
             <div class="story-item-l">
               <img :src="item.thumbnail" />
             </div>
