@@ -11,7 +11,7 @@ const options = {
             链接：<a style='color: var(--color-primary)' href='https://post.smzdm.com/p/a4d8onew/' target='__blank'>什么值得买</a>`
         ],
         [
-          `省流总结，不推荐入职 <span style='color: var(--color-primary)'>珠海城觅科技有限公司</span>，他们的产品是“澳觅APP”`,
+          `省流总结，不推荐入职 <span style='color: var(--color-primary)'>珠海城觅科技有限公司</span>，他们的产品是 <span style='color: var(--color-primary)'>澳觅APP</span>`,
           { fontWeight: 'bold' }
         ],
         [
@@ -222,15 +222,15 @@ const options = {
           { fontWeight: ' bold' }
         ],
         [
-          `2.1公司主动赔偿：n（2.5）+1为77897.33元`,
+          `2.1 公司主动赔偿：n（2.5）+1为77897.33元`,
           { fontWeight: ' bold' }
         ],
         [
-          `2.2行政手段：`,
+          `2.2 行政手段`,
           { fontWeight: ' bold' }
         ],
         [
-          `2.21社保补缴`,
+          `2.21 社保补缴`,
           { fontWeight: ' bold' }
         ],
         [
@@ -242,14 +242,14 @@ const options = {
           'image'
         ],
         [
-          `2.22公积金补缴`,
+          `2.22 公积金补缴`,
           { fontWeight: ' bold' }
         ],
         [
           `还未投诉，预估不低于5万元`
         ],
         [
-          `2.3法律手段：我已起诉珠海城觅科技有限公司，并已经依法维护自己的权利，获得2n和加班费，未休年假的差值共69111.12元`,
+          `2.3 法律手段：我已起诉珠海城觅科技有限公司，并已经依法维护自己的权利，获得2n和加班费，未休年假的差值共69111.12元`,
           { fontWeight: 'bold' }
         ],
         [

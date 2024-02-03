@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="./base.css">
   <link rel="stylesheet" href="./blog.css">
   <script src="./libs/vue@3.4.15.min.js"></script>
+  <script src="./utils.js"></script>
 </head>
 
 <body>
   <div id="app">
     <div class="header-box">
-      <h1>无产阶级万岁</h1>
+      <h1>无产阶级必胜</h1>
       <a href="./index.html">首页</a>
     </div>
     <div class="content-box">
@@ -26,7 +27,7 @@
   </div>
 </body>
 <script>
-  const id = location.search.split('?')[1].split('&').find(item => item.split('=')[0] === 'id').split('=')[1]
+  const id = getUrlParm('id')
   const s = document.createElement('script')
   s.src = `./blog/blog_${id}.js`
   document.body.append(s)

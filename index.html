@@ -7,6 +7,7 @@
   <title>proletarian revolution</title>
   <link rel="stylesheet" href="./style.css">
   <script src="./libs/vue@3.4.15.min.js"></script>
+  <script src="./utils.js"></script>
 </head>
 
 <body>
@@ -15,12 +16,12 @@
     <div class="app-box">
       <header>
         <div class="header-box">
-          <h1>无 产 阶 级 万 岁</h1>
-          <p>守护本该属于我们的权益</p>
+          <h1>无 产 阶 级 必 胜</h1>
+          <p>守护本该属于我们的工人权益</p>
       </header>
       <nav>
         <a :class="getNavTabClass('story')" @click="onTabClick('story')">革命的前行者</a>
-        <a :class="getNavTabClass('tutorial')" @click="onTabClick('tutorial')">诡计多端</a>
+        <a :class="getNavTabClass('tutorial')" @click="onTabClick('tutorial')">敌人的诡计</a>
         <a :class="getNavTabClass('regulation')" @click="onTabClick('regulation')">法律条文</a>
       </nav>
       <div class="content-box">
