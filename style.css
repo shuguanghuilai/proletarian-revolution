@@ -1,37 +1,7 @@
 @import url(./base.css);
 
-.regulations-box {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.regulations-box h2 {
-  color: var(--color-primary);
-}
-
-.link-box {
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.link-box:hover {
-  box-shadow: 0 0 1rem 0.4rem #eee;
-}
-
-.link-box p {
-  font-size: 1.4rem;
-  color: #666;
-}
-
-/* //////////////////////////////////////////////////////////////// */
 .app-box {
   max-width: 90rem;
-  min-width: 50rem;
   /* background-color: yellowgreen; */
   margin: 0 auto;
   z-index: 99;
@@ -96,7 +66,7 @@ nav a:hover {
 }
 
 .content-box {
-  padding: 0 1.6rem 4rem 0;
+  padding: 0 1.6rem 4rem 1.6rem;
 }
 
 .story-box {
@@ -144,4 +114,33 @@ nav a:hover {
   color: #666;
   flex: 1;
   overflow: hidden;
+}
+
+.link-box {
+  border-radius: 0.4rem;
+  cursor: pointer;
+  /* padding: 0.8rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.link-box:hover {
+  box-shadow: 0 0 1rem 0.4rem #eee;
+}
+
+.link-box p {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.regulations-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.regulations-box h2 {
+  color: var(--color-primary);
 }

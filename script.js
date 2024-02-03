@@ -103,7 +103,19 @@ const options = {
       storys: [
         {
           label: '我用十天的时间，拿到了到了n＋1！',
-          desc: '杭州，工龄11个月。想裁员不赔偿，我用十天的时间，拿到了到了n+1！你真的甘心只做有经验的事情吗？那你人生的各种个第一次岂不是永远都不会发生？',
+          desc: '你真的甘心只做有经验的事情吗？那你人生的各种个第一次岂不是永远都不会发生？',
+          url: './blog/blog_1.html',
+          thumbnail: 'blog/blog_1/6.png'
+        },
+        {
+          label: '我用十天的时间，拿到了到了n＋1！',
+          desc: '',
+          url: './blog/blog_1.html',
+          thumbnail: 'blog/blog_1/6.png'
+        },
+        {
+          label: '我用十天的时间，拿到了到了n＋1！',
+          desc: '杭州，工龄11个月。想裁员不赔偿，我用十天的时间，拿到了到了n+1！',
           url: './blog/blog_1.html',
           thumbnail: 'blog/blog_1/6.png'
         }
