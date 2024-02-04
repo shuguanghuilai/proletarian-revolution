@@ -185,7 +185,7 @@ const options = {
   },
 
   created() {
-    const activeTab = getHash()
+    const activeTab = getHash() || 'story'
     if (activeTab !== this.activeTab) {
       this.activeTab = activeTab
       pushRouter(this.activeTab)
