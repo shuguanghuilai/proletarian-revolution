@@ -28,11 +28,17 @@ li {
   list-style-type: none;
 }
 
+p {
+  letter-spacing: 0.1rem;
+}
+
 :root {
   --color-red-1: #cc3333;
   --color-red-2: #cc3333;
   --color-gray-1: #ccc;
   --color-gray-2: #37352f;
+
+  --line-height-text-1: 1.5
 }
 
 :root {
@@ -40,6 +46,7 @@ li {
   --color-info: var(--color-red-2);
 
   --text-p-color: var(--color-gray-2);
+  --text-line-height: var(--line-height-text-1);
 }
 
 #app {

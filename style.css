@@ -164,3 +164,41 @@ nav a:hover {
 .organize-box img {
   width: 100%;
 }
+
+.evil-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.evil-item {
+  border: 0.1rem solid #fefefe;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  box-shadow: 0 0 1rem 0.4rem #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.evil-item h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.evil-item h2 label {
+  flex: 2;
+}
+
+.evil-item h2 span {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  word-wrap: break-word;
+}
+
+.evil-item p {
+  color: var(--text-p-color);
+  line-height: var(--text-line-height);
+}

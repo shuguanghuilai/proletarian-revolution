@@ -7,8 +7,9 @@ const options = {
       contents: [
         [
           `作者：曼秀雷不蹲
-            <br />
-            链接：<a style='color: var(--color-primary)' href='https://post.smzdm.com/p/a4d8onew/' target='__blank'>什么值得买</a>`
+          <br />
+          链接：<a style='color: var(--color-primary)' href='https://post.smzdm.com/p/a4d8onew/' target='__blank'>什么值得买</a>
+          `
         ],
         [
           `省流总结，不推荐入职 <span style='color: var(--color-primary)'>珠海城觅科技有限公司</span>，他们的产品是 <span style='color: var(--color-primary)'>澳觅APP</span>`,
@@ -330,6 +331,10 @@ const options = {
         ]
       ]
     }
+  },
+
+  created() {
+    document.title = this.title
   },
 
   methods: {
