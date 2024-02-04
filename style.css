@@ -196,6 +196,8 @@ nav a:hover {
   display: flex;
   justify-content: flex-end;
   word-wrap: break-word;
+  align-items: center;
+  font-size: 1.4rem;
 }
 
 .evil-item p {

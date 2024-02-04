@@ -56,9 +56,9 @@
                 {{item.label}}
               </label>
               <span>
-                <template v-for="(level, i) of item.level">
+                <b v-for="(level, i) of item.level">
                   ⭐
-                </template>
+                </b>
               </span>
             </h2>
             <p v-html="item.desc"></p>
