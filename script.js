@@ -3,7 +3,7 @@ const { createApp, ref } = Vue
 const options = {
   data() {
     return {
-      activeTab: 'evil',
+      activeTab: 'story',
       countryRegulations: [
         {
           label: '中华人民共和国劳动法',
@@ -156,9 +156,18 @@ const options = {
     }
   },
 
+  created() {
+    const activeTab = getHash()
+    if (activeTab !== this.activeTab) {
+      this.activeTab = activeTab
+      pushRouter(this.activeTab)
+    }
+  },
+
   methods: {
     onTabClick(name) {
       this.activeTab = name
+      pushRouter(name)
     },
 
     getNavTabClass(name) {

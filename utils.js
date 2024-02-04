@@ -6,3 +6,23 @@ const getUrlParm = key => {
     return ''
   }
 }
+
+const pushRouter = (name, data = {}) => {
+  let hash = `#${name}`
+  const params =
+    Object.entries(data)
+      .map(([key, value]) => {
+        return `${key}=${value}`
+      })
+      .join('&')
+
+  if (params.length > 0) {
+    hash += `?${params}`
+  }
+
+  location.hash = `#${name}`
+}
+
+const getHash = () => {
+  return location.hash.split('?')[0].slice(1)
+}
