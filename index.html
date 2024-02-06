@@ -23,7 +23,7 @@
         <a :class="getNavTabClass('story')" @click="onTabClick('story')">革命的前行者</a>
         <a :class="getNavTabClass('evil')" @click="onTabClick('evil')">敌人的诡计</a>
         <a :class="getNavTabClass('regulation')" @click="onTabClick('regulation')">法律条文</a>
-        <!-- <a :class="getNavTabClass('organize')" @click="onTabClick('organize')">加入群组</a> -->
+        <a :class="getNavTabClass('organize')" @click="onTabClick('organize')">加入组织</a>
       </nav>
       <div class="content-box">
         <div v-if="activeTab === 'story'" class="story-box">
@@ -50,6 +50,7 @@
           </a>
         </div>
         <div v-else-if="activeTab === 'evil'" class="evil-box">
+          <p>下面介绍敌人常用的几种手段，如果读者还见过更牛X或更冷门的方式，加入组织群跟给我们反馈，本人立马加上去！写得比较精简，有些革命同志看完可能觉得不符合我提到的反击条件，莫慌！加入组织群展开说说！</p>
           <div v-for="(item, index) of evilDeeds" class="evil-item">
             <h2>
               <label>
