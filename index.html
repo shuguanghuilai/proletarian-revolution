@@ -16,7 +16,7 @@
     <div class="app-box">
       <header>
         <div class="header-box">
-          <h1>无 产 阶 级 工 人 必 胜</h1>
+          <h1>无 产 阶 级 工 人 必 胜!</h1>
           <p>守护属于我们的工人权益</p>
       </header>
       <nav>
@@ -50,7 +50,7 @@
           </a>
         </div>
         <div v-else-if="activeTab === 'evil'" class="evil-box">
-          <p>下面介绍敌人常用的几种手段，如果读者还见过更牛X或更冷门的方式，加入组织群跟给我们反馈，本人立马加上去！写得比较精简，有些革命同志看完可能觉得不符合我提到的反击条件，莫慌！加入组织群展开说说！</p>
+          <p>下面介绍敌人常用的几种手段，<a @click="onGoto" class="welcome-link">欢迎补充</a></p>
           <div v-for="(item, index) of evilDeeds" class="evil-item">
             <h2>
               <label>

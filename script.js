@@ -260,6 +260,10 @@ const options = {
 
     onSearch() {
 
+    },
+
+    onGoto() {
+      this.onTabClick('organize')
     }
   }
 }
