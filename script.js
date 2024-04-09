@@ -98,7 +98,7 @@ const options = {
 
       storys: [
         {
-          label: '【站长】一个人或许很难，但一群人的力量绝对很大！',
+          label: '【站长】用集体邮件拿到了N!',
           desc: '这个世界就是个草台班子。',
           url: './blog.html?id=7',
           thumbnail: 'blog/blog_1/6.png'
