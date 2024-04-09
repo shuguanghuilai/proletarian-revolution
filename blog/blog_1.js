@@ -3,7 +3,7 @@ const { createApp, ref } = Vue
 const options = {
   data() {
     return {
-      title: '我用十天的时间，拿到了到了n＋1！',
+      title: '我用十天的时间，拿到了n＋1！',
       contents: [
         [
           `作者：翠花banana

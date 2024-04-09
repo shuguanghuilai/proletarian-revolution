@@ -98,7 +98,13 @@ const options = {
 
       storys: [
         {
-          label: '【精选】我用十天的时间，拿到了到了n＋1！',
+          label: '【站长】一个人或许很难，但一群人的力量绝对很大！',
+          desc: '这个世界就是个草台班子。',
+          url: './blog.html?id=7',
+          thumbnail: 'blog/blog_1/6.png'
+        },
+        {
+          label: '【精选】我用十天的时间，拿到了n＋1！',
           desc: '你真的甘心只做有经验的事情吗？那你人生的各种个第一次岂不是永远都不会发生？',
           url: './blog.html?id=1',
           thumbnail: 'blog/blog_1/6.png'
